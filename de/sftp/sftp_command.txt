@@ -1,0 +1,1 @@
+sftp -i /Users/liweiw/Desktop/SFTP/clemson_privatekey.pem DESC_CLEMSON@secureftp.dominionenergy.com

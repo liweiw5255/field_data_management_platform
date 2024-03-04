@@ -1,0 +1,39 @@
+timestamp,temp,dewPt,rh,wx_phrase
+2023-08-27 02:56:00,24,22,87,Mostly Cloudy
+2023-08-27 03:56:00,25,23,88,Mostly Cloudy
+2023-08-27 04:56:00,25,23,88,Mostly Cloudy
+2023-08-27 05:56:00,25,23,90,Mostly Cloudy
+2023-08-27 06:56:00,25,23,90,Mostly Cloudy
+2023-08-27 07:56:00,25,23,90,Cloudy
+2023-08-27 08:56:00,24,23,91,Mostly Cloudy
+2023-08-27 09:56:00,24,23,94,Mostly Cloudy
+2023-08-27 10:56:00,27,24,85,Mostly Cloudy
+2023-08-27 11:56:00,28,24,79,Fair
+2023-08-27 12:56:00,31,24,65,Fair
+2023-08-27 13:56:00,33,24,59,Partly Cloudy
+2023-08-27 14:56:00,34,23,51,Partly Cloudy
+2023-08-27 15:56:00,36,23,47,Mostly Cloudy
+2023-08-27 16:56:00,35,22,47,Mostly Cloudy
+2023-08-27 17:56:00,34,24,56,Mostly Cloudy
+2023-08-27 18:45:00,34,23,52,Thunder in the Vicinity
+2023-08-27 18:56:00,36,23,47,Thunder in the Vicinity
+2023-08-27 19:04:00,36,23,47,Thunder
+2023-08-27 19:36:00,27,23,79,Thunder in the Vicinity
+2023-08-27 19:56:00,27,23,79,Thunder
+2023-08-27 20:29:00,26,23,82,Light Rain with Thunder
+2023-08-27 20:52:00,24,24,100,T-Storm / Windy
+2023-08-27 20:53:00,24,23,94,Heavy T-Storm / Windy
+2023-08-27 21:05:00,23,22,96,Heavy T-Storm
+2023-08-27 21:14:00,23,23,97,Heavy T-Storm
+2023-08-27 21:19:00,23,23,97,Light Rain with Thunder
+2023-08-27 21:25:00,23,23,100,Light Rain with Thunder
+2023-08-27 21:56:00,23,23,100,Thunder in the Vicinity
+2023-08-27 22:18:00,23,23,100,Light Rain
+2023-08-27 22:56:00,23,23,97,Thunder in the Vicinity
+2023-08-27 23:23:00,23,23,97,Mostly Cloudy
+2023-08-27 23:56:00,23,23,97,Cloudy
+2023-08-28 00:05:00,23,23,100,Light Rain with Thunder
+2023-08-28 00:56:00,23,23,100,T-Storm
+2023-08-28 01:20:00,22,22,100,Light Rain
+2023-08-28 01:44:00,23,23,100,Light Rain
+2023-08-28 01:56:00,23,23,100,Light Rain

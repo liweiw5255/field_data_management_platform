@@ -1,0 +1,33 @@
+timestamp,temp,dewPt,rh,wx_phrase
+2023-07-21 02:56:00,23,22,91,Mostly Cloudy
+2023-07-21 03:56:00,23,21,87,Mostly Cloudy
+2023-07-21 04:56:00,23,20,82,Mostly Cloudy
+2023-07-21 05:56:00,23,21,85,Mostly Cloudy
+2023-07-21 06:56:00,23,21,87,Fair
+2023-07-21 07:56:00,22,21,91,Fair
+2023-07-21 08:56:00,23,21,87,Partly Cloudy
+2023-07-21 09:56:00,24,21,84,Mostly Cloudy
+2023-07-21 10:56:00,26,22,77,Partly Cloudy
+2023-07-21 11:56:00,29,22,65,Partly Cloudy
+2023-07-21 12:56:00,30,23,65,Mostly Cloudy
+2023-07-21 13:56:00,31,22,59,Mostly Cloudy
+2023-07-21 14:56:00,31,22,57,Mostly Cloudy
+2023-07-21 15:56:00,32,22,55,Mostly Cloudy
+2023-07-21 16:56:00,34,22,49,Mostly Cloudy
+2023-07-21 17:56:00,34,22,49,Partly Cloudy
+2023-07-21 18:53:00,34,21,46,Thunder in the Vicinity
+2023-07-21 18:56:00,34,21,46,Thunder in the Vicinity
+2023-07-21 19:29:00,34,22,49,Partly Cloudy
+2023-07-21 19:56:00,34,23,52,Partly Cloudy
+2023-07-21 20:56:00,33,22,52,Partly Cloudy
+2023-07-21 21:56:00,32,23,59,Partly Cloudy
+2023-07-21 22:40:00,31,23,65,Thunder in the Vicinity
+2023-07-21 22:56:00,29,21,61,Thunder in the Vicinity
+2023-07-21 23:37:00,26,20,71,Partly Cloudy
+2023-07-21 23:56:00,25,21,76,Mostly Cloudy
+2023-07-22 00:07:00,25,21,76,Thunder in the Vicinity
+2023-07-22 00:27:00,25,22,82,Heavy T-Storm
+2023-07-22 00:46:00,24,23,94,Light Rain
+2023-07-22 00:56:00,24,23,96,Mostly Cloudy
+2023-07-22 01:13:00,23,23,100,Thunder in the Vicinity
+2023-07-22 01:56:00,23,23,100,Thunder in the Vicinity
