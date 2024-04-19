@@ -1,0 +1,25 @@
+time,ambient_temperature,relative_humidity,weather_condition
+2023-05-17 00:56:00,24,79,Cloudy
+2023-05-17 01:56:00,24,82,Cloudy
+2023-05-17 02:56:00,23,71,Mostly Cloudy
+2023-05-17 03:56:00,23,71,Mostly Cloudy
+2023-05-17 04:56:00,22,73,Mostly Cloudy
+2023-05-17 05:56:00,22,78,Cloudy
+2023-05-17 06:56:00,21,81,Mostly Cloudy
+2023-05-17 07:56:00,23,76,Mostly Cloudy
+2023-05-17 08:56:00,24,71,Mostly Cloudy
+2023-05-17 09:56:00,26,64,Mostly Cloudy
+2023-05-17 10:56:00,26,66,Mostly Cloudy
+2023-05-17 11:56:00,27,62,Mostly Cloudy
+2023-05-17 12:56:00,29,51,Mostly Cloudy
+2023-05-17 13:56:00,29,55,Mostly Cloudy
+2023-05-17 14:56:00,29,49,Mostly Cloudy
+2023-05-17 15:56:00,29,48,Mostly Cloudy
+2023-05-17 16:56:00,29,48,Mostly Cloudy
+2023-05-17 17:56:00,27,64,Mostly Cloudy
+2023-05-17 18:56:00,27,58,Mostly Cloudy
+2023-05-17 19:56:00,27,58,Mostly Cloudy
+2023-05-17 20:56:00,25,71,Light Rain
+2023-05-17 21:56:00,24,76,Mostly Cloudy
+2023-05-17 22:56:00,24,76,Mostly Cloudy
+2023-05-17 23:56:00,24,66,Cloudy

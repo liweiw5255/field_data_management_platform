@@ -1,0 +1,35 @@
+time,ambient_temperature,relative_humidity,weather_condition
+2023-01-03 00:56:00,13,93,Partly Cloudy
+2023-01-03 01:56:00,13,90,Fair
+2023-01-03 02:56:00,13,87,Partly Cloudy
+2023-01-03 03:56:00,12,90,Mostly Cloudy
+2023-01-03 04:56:00,12,90,Mostly Cloudy
+2023-01-03 05:56:00,12,89,Mostly Cloudy
+2023-01-03 06:56:00,11,93,Mostly Cloudy
+2023-01-03 07:03:00,11,93,Mostly Cloudy
+2023-01-03 07:28:00,12,93,Mostly Cloudy
+2023-01-03 07:51:00,13,100,Cloudy
+2023-01-03 07:56:00,13,97,Cloudy
+2023-01-03 08:49:00,14,96,Mostly Cloudy
+2023-01-03 08:56:00,14,96,Mostly Cloudy
+2023-01-03 09:56:00,17,86,Mostly Cloudy
+2023-01-03 10:56:00,20,76,Mostly Cloudy
+2023-01-03 11:56:00,21,68,Mostly Cloudy
+2023-01-03 12:56:00,22,59,Mostly Cloudy
+2023-01-03 13:56:00,23,61,Mostly Cloudy
+2023-01-03 14:47:00,22,70,Mostly Cloudy
+2023-01-03 14:56:00,21,73,Mostly Cloudy
+2023-01-03 15:39:00,21,75,Partly Cloudy
+2023-01-03 15:56:00,21,75,Partly Cloudy
+2023-01-03 16:56:00,21,73,Partly Cloudy
+2023-01-03 17:56:00,19,79,Mostly Cloudy
+2023-01-03 18:56:00,18,84,Mostly Cloudy
+2023-01-03 19:56:00,18,84,Mostly Cloudy
+2023-01-03 20:56:00,17,87,Mostly Cloudy
+2023-01-03 21:56:00,16,97,Light Rain
+2023-01-03 22:24:00,17,96,Heavy Rain
+2023-01-03 22:56:00,17,97,Heavy Rain
+2023-01-03 23:22:00,17,97,Heavy T-Storm
+2023-01-03 23:29:00,17,100,Heavy T-Storm
+2023-01-03 23:37:00,17,100,Rain
+2023-01-03 23:56:00,17,96,Light Rain

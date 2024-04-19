@@ -1,0 +1,28 @@
+time,ambient_temperature,relative_humidity,weather_condition
+2022-05-02 00:56:00,19,90,Fair
+2022-05-02 01:56:00,19,90,Fair
+2022-05-02 02:56:00,18,96,Partly Cloudy
+2022-05-02 03:56:00,17,97,Partly Cloudy
+2022-05-02 04:56:00,17,97,Partly Cloudy
+2022-05-02 05:37:00,17,97,Partly Cloudy
+2022-05-02 05:46:00,17,97,Mostly Cloudy
+2022-05-02 05:56:00,17,97,Cloudy
+2022-05-02 06:56:00,17,97,Mostly Cloudy
+2022-05-02 07:05:00,17,97,Partly Cloudy
+2022-05-02 07:56:00,18,93,Cloudy
+2022-05-02 08:56:00,20,87,Mostly Cloudy
+2022-05-02 09:56:00,22,78,Mostly Cloudy
+2022-05-02 10:56:00,24,74,Partly Cloudy
+2022-05-02 11:56:00,27,64,Partly Cloudy
+2022-05-02 12:56:00,28,58,Partly Cloudy
+2022-05-02 13:56:00,29,51,Mostly Cloudy
+2022-05-02 14:56:00,29,49,Mostly Cloudy
+2022-05-02 15:56:00,31,46,Mostly Cloudy
+2022-05-02 16:56:00,30,46,Mostly Cloudy
+2022-05-02 17:56:00,30,46,Partly Cloudy
+2022-05-02 18:56:00,29,48,Partly Cloudy
+2022-05-02 19:56:00,28,54,Partly Cloudy
+2022-05-02 20:56:00,25,66,Partly Cloudy
+2022-05-02 21:56:00,23,73,Partly Cloudy
+2022-05-02 22:56:00,21,84,Fair
+2022-05-02 23:56:00,21,90,Partly Cloudy

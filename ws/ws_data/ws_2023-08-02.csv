@@ -1,0 +1,25 @@
+time,ambient_temperature,relative_humidity,weather_condition
+2023-08-02 00:56:00,23,87,Partly Cloudy
+2023-08-02 01:56:00,23,93,Partly Cloudy
+2023-08-02 02:56:00,23,93,Fair
+2023-08-02 03:56:00,22,93,Fair
+2023-08-02 04:56:00,22,96,Fair
+2023-08-02 05:56:00,22,93,Fair
+2023-08-02 06:56:00,22,91,Partly Cloudy
+2023-08-02 07:56:00,23,87,Mostly Cloudy
+2023-08-02 08:56:00,24,82,Fair
+2023-08-02 09:56:00,26,72,Fair
+2023-08-02 10:56:00,27,69,Partly Cloudy
+2023-08-02 11:56:00,28,63,Partly Cloudy
+2023-08-02 12:56:00,29,59,Partly Cloudy
+2023-08-02 13:56:00,30,57,Partly Cloudy
+2023-08-02 14:56:00,30,53,Partly Cloudy
+2023-08-02 15:56:00,31,49,Partly Cloudy
+2023-08-02 16:56:00,31,46,Partly Cloudy
+2023-08-02 17:56:00,31,48,Partly Cloudy
+2023-08-02 18:56:00,29,56,Cloudy
+2023-08-02 19:56:00,28,58,Cloudy
+2023-08-02 20:56:00,27,65,Mostly Cloudy
+2023-08-02 21:56:00,27,67,Mostly Cloudy
+2023-08-02 22:56:00,27,64,Mostly Cloudy
+2023-08-02 23:56:00,26,74,Mostly Cloudy

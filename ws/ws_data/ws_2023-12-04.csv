@@ -1,0 +1,25 @@
+time,ambient_temperature,relative_humidity,weather_condition
+2023-12-04 00:56:00,13,89,Cloudy
+2023-12-04 01:56:00,12,89,Cloudy
+2023-12-04 02:56:00,11,93,Cloudy
+2023-12-04 03:56:00,10,96,Cloudy
+2023-12-04 04:56:00,11,89,Cloudy
+2023-12-04 05:56:00,8,100,Fair
+2023-12-04 06:56:00,9,93,Cloudy
+2023-12-04 07:56:00,8,97,Partly Cloudy
+2023-12-04 08:56:00,12,80,Partly Cloudy
+2023-12-04 09:56:00,16,60,Partly Cloudy
+2023-12-04 10:56:00,18,43,Mostly Cloudy
+2023-12-04 11:56:00,19,37,Mostly Cloudy
+2023-12-04 12:56:00,20,35,Mostly Cloudy
+2023-12-04 13:56:00,21,30,Mostly Cloudy
+2023-12-04 14:56:00,21,30,Partly Cloudy
+2023-12-04 15:56:00,21,36,Partly Cloudy
+2023-12-04 16:56:00,19,43,Fair
+2023-12-04 17:56:00,17,52,Partly Cloudy
+2023-12-04 18:56:00,12,72,Partly Cloudy
+2023-12-04 19:56:00,11,71,Partly Cloudy
+2023-12-04 20:56:00,12,59,Partly Cloudy
+2023-12-04 21:56:00,11,59,Partly Cloudy
+2023-12-04 22:56:00,14,45,Partly Cloudy
+2023-12-04 23:56:00,13,49,Partly Cloudy

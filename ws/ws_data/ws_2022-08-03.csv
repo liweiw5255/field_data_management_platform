@@ -1,0 +1,33 @@
+time,ambient_temperature,relative_humidity,weather_condition
+2022-08-03 00:56:00,26,82,Fair
+2022-08-03 01:56:00,25,88,Fair
+2022-08-03 02:56:00,25,84,Fair
+2022-08-03 03:56:00,25,88,Partly Cloudy
+2022-08-03 04:56:00,25,84,Fair
+2022-08-03 05:56:00,24,90,Partly Cloudy
+2022-08-03 06:56:00,23,93,Mostly Cloudy
+2022-08-03 07:56:00,26,87,Mostly Cloudy
+2022-08-03 08:56:00,27,82,Mostly Cloudy
+2022-08-03 09:56:00,31,63,Mostly Cloudy
+2022-08-03 10:56:00,31,59,Mostly Cloudy
+2022-08-03 11:56:00,33,55,Mostly Cloudy
+2022-08-03 12:56:00,33,52,Mostly Cloudy
+2022-08-03 13:56:00,32,54,Mostly Cloudy
+2022-08-03 14:56:00,34,49,Mostly Cloudy
+2022-08-03 15:13:00,34,44,Thunder in the Vicinity
+2022-08-03 15:26:00,35,44,Thunder
+2022-08-03 15:41:00,35,41,Thunder in the Vicinity
+2022-08-03 15:56:00,33,47,Thunder in the Vicinity
+2022-08-03 16:31:00,29,61,Mostly Cloudy
+2022-08-03 16:56:00,28,65,Mostly Cloudy
+2022-08-03 17:18:00,27,69,Thunder in the Vicinity
+2022-08-03 17:33:00,27,69,Mostly Cloudy
+2022-08-03 17:41:00,26,72,Thunder in the Vicinity
+2022-08-03 17:56:00,26,71,Thunder
+2022-08-03 18:03:00,25,82,T-Storm
+2022-08-03 18:56:00,23,91,Mostly Cloudy
+2022-08-03 19:56:00,23,87,Mostly Cloudy
+2022-08-03 20:56:00,23,93,Mostly Cloudy
+2022-08-03 21:56:00,24,87,Mostly Cloudy
+2022-08-03 22:56:00,23,93,Mostly Cloudy
+2022-08-03 23:56:00,23,93,Mostly Cloudy

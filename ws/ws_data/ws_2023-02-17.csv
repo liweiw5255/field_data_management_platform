@@ -1,0 +1,32 @@
+time,ambient_temperature,relative_humidity,weather_condition
+2023-02-17 00:56:00,17,84,Fair
+2023-02-17 01:56:00,18,81,Partly Cloudy
+2023-02-17 02:56:00,18,84,Partly Cloudy
+2023-02-17 03:56:00,18,84,Mostly Cloudy
+2023-02-17 04:56:00,18,81,Mostly Cloudy
+2023-02-17 05:56:00,18,81,Partly Cloudy
+2023-02-17 06:56:00,18,81,Mostly Cloudy
+2023-02-17 07:56:00,19,78,Cloudy
+2023-02-17 08:56:00,18,87,Cloudy
+2023-02-17 09:18:00,19,84,Cloudy
+2023-02-17 09:56:00,20,81,Cloudy
+2023-02-17 10:33:00,19,87,Light Rain
+2023-02-17 10:56:00,19,90,Cloudy
+2023-02-17 11:16:00,19,90,Cloudy
+2023-02-17 11:25:00,19,90,Cloudy
+2023-02-17 11:40:00,19,93,Rain
+2023-02-17 11:56:00,19,96,Light Rain
+2023-02-17 12:08:00,19,96,Light Rain
+2023-02-17 12:56:00,20,87,Light Rain
+2023-02-17 13:08:00,20,87,Cloudy
+2023-02-17 13:56:00,19,75,Light Rain
+2023-02-17 14:56:00,19,50,Light Rain / Windy
+2023-02-17 15:56:00,18,42,Mostly Cloudy / Windy
+2023-02-17 16:56:00,16,39,Mostly Cloudy / Windy
+2023-02-17 17:56:00,13,40,Mostly Cloudy / Windy
+2023-02-17 18:56:00,12,43,Mostly Cloudy
+2023-02-17 19:56:00,11,45,Mostly Cloudy
+2023-02-17 20:56:00,10,41,Mostly Cloudy
+2023-02-17 21:56:00,8,46,Mostly Cloudy
+2023-02-17 22:56:00,7,51,Mostly Cloudy
+2023-02-17 23:56:00,6,53,Mostly Cloudy

@@ -1,0 +1,25 @@
+time,ambient_temperature,relative_humidity,weather_condition
+2023-04-25 00:56:00,13,72,Mostly Cloudy
+2023-04-25 01:56:00,13,74,Mostly Cloudy
+2023-04-25 02:56:00,12,83,Cloudy
+2023-04-25 03:56:00,13,77,Cloudy
+2023-04-25 04:56:00,13,75,Cloudy
+2023-04-25 05:56:00,13,69,Mostly Cloudy
+2023-04-25 06:56:00,13,69,Mostly Cloudy
+2023-04-25 07:56:00,13,74,Mostly Cloudy
+2023-04-25 08:56:00,14,67,Cloudy
+2023-04-25 09:56:00,16,60,Mostly Cloudy
+2023-04-25 10:56:00,17,53,Mostly Cloudy
+2023-04-25 11:56:00,19,42,Mostly Cloudy
+2023-04-25 12:56:00,21,40,Mostly Cloudy
+2023-04-25 13:56:00,21,36,Mostly Cloudy
+2023-04-25 14:56:00,22,38,Mostly Cloudy
+2023-04-25 15:56:00,22,41,Mostly Cloudy
+2023-04-25 16:56:00,21,42,Mostly Cloudy
+2023-04-25 17:56:00,22,39,Mostly Cloudy
+2023-04-25 18:56:00,21,39,Mostly Cloudy
+2023-04-25 19:56:00,21,40,Mostly Cloudy
+2023-04-25 20:56:00,19,47,Mostly Cloudy
+2023-04-25 21:56:00,19,45,Mostly Cloudy
+2023-04-25 22:56:00,18,45,Cloudy
+2023-04-25 23:56:00,18,46,Cloudy

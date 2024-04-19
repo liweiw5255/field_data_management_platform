@@ -1,0 +1,25 @@
+time,ambient_temperature,relative_humidity,weather_condition
+2022-03-22 00:56:00,13,55,Fair
+2022-03-22 01:56:00,13,59,Mostly Cloudy
+2022-03-22 02:56:00,12,64,Fair
+2022-03-22 03:56:00,11,68,Mostly Cloudy
+2022-03-22 04:56:00,9,80,Fair
+2022-03-22 05:56:00,9,77,Fair
+2022-03-22 06:56:00,10,74,Partly Cloudy
+2022-03-22 07:56:00,9,80,Patches of Fog
+2022-03-22 08:56:00,12,72,Patches of Fog
+2022-03-22 09:56:00,14,65,Mostly Cloudy
+2022-03-22 10:56:00,21,49,Mostly Cloudy
+2022-03-22 11:56:00,22,44,Mostly Cloudy
+2022-03-22 12:56:00,22,40,Mostly Cloudy
+2022-03-22 13:56:00,22,40,Mostly Cloudy
+2022-03-22 14:56:00,23,38,Mostly Cloudy
+2022-03-22 15:56:00,23,37,Mostly Cloudy
+2022-03-22 16:56:00,23,38,Mostly Cloudy
+2022-03-22 17:56:00,23,41,Mostly Cloudy
+2022-03-22 18:56:00,22,45,Partly Cloudy
+2022-03-22 19:56:00,20,50,Partly Cloudy
+2022-03-22 20:56:00,19,54,Partly Cloudy
+2022-03-22 21:56:00,18,61,Partly Cloudy
+2022-03-22 22:56:00,17,67,Partly Cloudy
+2022-03-22 23:56:00,17,67,Partly Cloudy

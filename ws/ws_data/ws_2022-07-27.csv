@@ -1,0 +1,25 @@
+time,ambient_temperature,relative_humidity,weather_condition
+2022-07-27 00:56:00,27,77,Partly Cloudy
+2022-07-27 01:56:00,27,77,Fair
+2022-07-27 02:56:00,26,82,Fair
+2022-07-27 03:56:00,26,84,Fair
+2022-07-27 04:56:00,25,88,Fair
+2022-07-27 05:56:00,25,88,Fair
+2022-07-27 06:56:00,25,88,Fair
+2022-07-27 07:56:00,26,87,Partly Cloudy
+2022-07-27 08:56:00,28,76,Partly Cloudy
+2022-07-27 09:56:00,30,67,Mostly Cloudy
+2022-07-27 10:56:00,31,63,Mostly Cloudy
+2022-07-27 11:56:00,32,59,Mostly Cloudy
+2022-07-27 12:56:00,33,54,Mostly Cloudy
+2022-07-27 13:56:00,33,55,Mostly Cloudy
+2022-07-27 14:56:00,34,50,Mostly Cloudy
+2022-07-27 15:56:00,35,46,Mostly Cloudy
+2022-07-27 16:56:00,34,49,Mostly Cloudy
+2022-07-27 17:56:00,34,49,Mostly Cloudy
+2022-07-27 18:56:00,33,57,Mostly Cloudy
+2022-07-27 19:56:00,32,61,Mostly Cloudy
+2022-07-27 20:56:00,31,65,Partly Cloudy
+2022-07-27 21:56:00,30,67,Partly Cloudy
+2022-07-27 22:56:00,29,72,Partly Cloudy
+2022-07-27 23:56:00,28,74,Partly Cloudy

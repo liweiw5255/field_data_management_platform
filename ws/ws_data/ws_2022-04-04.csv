@@ -1,0 +1,25 @@
+time,ambient_temperature,relative_humidity,weather_condition
+2022-04-04 00:56:00,10,71,Fair
+2022-04-04 01:56:00,8,79,Fair
+2022-04-04 02:56:00,8,76,Fair
+2022-04-04 03:56:00,10,54,Fair
+2022-04-04 04:56:00,12,38,Fair
+2022-04-04 05:56:00,11,41,Fair
+2022-04-04 06:56:00,10,43,Fair
+2022-04-04 07:56:00,10,43,Partly Cloudy
+2022-04-04 08:56:00,12,41,Mostly Cloudy
+2022-04-04 09:56:00,14,36,Mostly Cloudy
+2022-04-04 10:56:00,17,31,Mostly Cloudy
+2022-04-04 11:56:00,18,33,Mostly Cloudy
+2022-04-04 12:56:00,21,36,Mostly Cloudy
+2022-04-04 13:56:00,22,34,Mostly Cloudy
+2022-04-04 14:56:00,24,29,Partly Cloudy
+2022-04-04 15:56:00,24,27,Partly Cloudy
+2022-04-04 16:56:00,25,25,Partly Cloudy
+2022-04-04 17:56:00,24,27,Mostly Cloudy
+2022-04-04 18:56:00,24,28,Mostly Cloudy
+2022-04-04 19:56:00,23,30,Partly Cloudy
+2022-04-04 20:56:00,18,47,Partly Cloudy
+2022-04-04 21:56:00,15,60,Partly Cloudy
+2022-04-04 22:56:00,17,54,Partly Cloudy
+2022-04-04 23:56:00,16,67,Partly Cloudy

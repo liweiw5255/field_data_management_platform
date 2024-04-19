@@ -1,0 +1,25 @@
+time,ambient_temperature,relative_humidity,weather_condition
+2023-01-16 00:56:00,-1,79,Fair
+2023-01-16 01:56:00,-2,85,Fair
+2023-01-16 02:56:00,-2,85,Fair
+2023-01-16 03:56:00,-2,88,Fair
+2023-01-16 04:56:00,-2,88,Fair
+2023-01-16 05:56:00,-2,85,Fair
+2023-01-16 06:56:00,-2,85,Partly Cloudy
+2023-01-16 07:56:00,-2,88,Mostly Cloudy
+2023-01-16 08:56:00,1,82,Mostly Cloudy
+2023-01-16 09:56:00,4,70,Partly Cloudy
+2023-01-16 10:56:00,9,48,Fair
+2023-01-16 11:56:00,13,36,Partly Cloudy
+2023-01-16 12:56:00,16,22,Mostly Cloudy
+2023-01-16 13:56:00,17,20,Mostly Cloudy
+2023-01-16 14:56:00,16,21,Mostly Cloudy
+2023-01-16 15:56:00,16,24,Mostly Cloudy
+2023-01-16 16:56:00,16,26,Mostly Cloudy
+2023-01-16 17:56:00,13,30,Mostly Cloudy
+2023-01-16 18:56:00,12,38,Mostly Cloudy
+2023-01-16 19:56:00,10,50,Mostly Cloudy
+2023-01-16 20:56:00,9,58,Mostly Cloudy
+2023-01-16 21:56:00,10,50,Mostly Cloudy
+2023-01-16 22:56:00,10,52,Mostly Cloudy
+2023-01-16 23:56:00,9,54,Mostly Cloudy

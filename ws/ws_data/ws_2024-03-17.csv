@@ -1,0 +1,25 @@
+time,ambient_temperature,relative_humidity,weather_condition
+2024-03-17 00:56:00,15,81,Partly Cloudy
+2024-03-17 01:56:00,15,78,Partly Cloudy
+2024-03-17 02:56:00,14,78,Mostly Cloudy
+2024-03-17 03:56:00,14,77,Mostly Cloudy
+2024-03-17 04:56:00,14,72,Fair
+2024-03-17 05:56:00,12,83,Fair
+2024-03-17 06:56:00,11,89,Fair
+2024-03-17 07:56:00,11,92,Mostly Cloudy
+2024-03-17 08:56:00,14,81,Mostly Cloudy
+2024-03-17 09:56:00,16,72,Mostly Cloudy
+2024-03-17 10:56:00,17,67,Mostly Cloudy
+2024-03-17 11:56:00,17,67,Cloudy
+2024-03-17 12:56:00,19,59,Mostly Cloudy
+2024-03-17 13:56:00,22,47,Mostly Cloudy
+2024-03-17 14:56:00,22,47,Mostly Cloudy
+2024-03-17 15:56:00,22,42,Mostly Cloudy
+2024-03-17 16:56:00,22,42,Mostly Cloudy
+2024-03-17 17:56:00,21,44,Mostly Cloudy
+2024-03-17 18:56:00,21,47,Mostly Cloudy
+2024-03-17 19:56:00,20,50,Mostly Cloudy
+2024-03-17 20:56:00,17,75,Cloudy
+2024-03-17 21:56:00,16,90,Cloudy
+2024-03-17 22:56:00,16,90,Mostly Cloudy
+2024-03-17 23:56:00,15,87,Partly Cloudy

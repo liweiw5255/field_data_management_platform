@@ -1,0 +1,31 @@
+time,ambient_temperature,relative_humidity,weather_condition
+2024-01-26 00:56:00,19,93,Partly Cloudy
+2024-01-26 01:56:00,18,97,Mostly Cloudy
+2024-01-26 02:39:00,19,93,Mostly Cloudy
+2024-01-26 02:49:00,18,100,Mostly Cloudy
+2024-01-26 02:56:00,19,96,Cloudy
+2024-01-26 03:56:00,18,97,Cloudy
+2024-01-26 04:56:00,19,97,Cloudy
+2024-01-26 05:08:00,19,97,Cloudy
+2024-01-26 05:56:00,19,100,Cloudy
+2024-01-26 06:15:00,19,100,Cloudy
+2024-01-26 06:56:00,18,100,Mostly Cloudy
+2024-01-26 07:39:00,19,96,Mostly Cloudy
+2024-01-26 07:56:00,19,96,Mostly Cloudy
+2024-01-26 08:31:00,18,100,Mostly Cloudy
+2024-01-26 08:56:00,19,96,Mostly Cloudy
+2024-01-26 09:56:00,20,90,Mostly Cloudy
+2024-01-26 10:56:00,23,73,Mostly Cloudy
+2024-01-26 11:56:00,23,71,Mostly Cloudy
+2024-01-26 12:56:00,23,66,Mostly Cloudy
+2024-01-26 13:56:00,24,62,Mostly Cloudy
+2024-01-26 14:56:00,25,58,Mostly Cloudy
+2024-01-26 15:56:00,25,58,Mostly Cloudy
+2024-01-26 16:56:00,24,60,Mostly Cloudy
+2024-01-26 17:56:00,22,68,Mostly Cloudy
+2024-01-26 18:56:00,19,81,Mostly Cloudy
+2024-01-26 19:56:00,19,81,Mostly Cloudy
+2024-01-26 20:56:00,18,87,Partly Cloudy
+2024-01-26 21:56:00,16,93,Mostly Cloudy
+2024-01-26 22:56:00,17,90,Partly Cloudy
+2024-01-26 23:56:00,15,100,Partly Cloudy

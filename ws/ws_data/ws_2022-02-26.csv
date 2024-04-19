@@ -1,0 +1,25 @@
+time,ambient_temperature,relative_humidity,weather_condition
+2022-02-26 00:56:00,12,77,Fair
+2022-02-26 01:56:00,12,66,Fair
+2022-02-26 02:56:00,10,71,Partly Cloudy
+2022-02-26 03:56:00,11,63,Cloudy
+2022-02-26 04:56:00,12,64,Cloudy
+2022-02-26 05:56:00,12,64,Cloudy
+2022-02-26 06:56:00,11,57,Mostly Cloudy
+2022-02-26 07:56:00,11,54,Mostly Cloudy
+2022-02-26 08:56:00,12,48,Mostly Cloudy
+2022-02-26 09:56:00,12,47,Mostly Cloudy
+2022-02-26 10:56:00,13,45,Mostly Cloudy
+2022-02-26 11:56:00,14,46,Mostly Cloudy
+2022-02-26 12:56:00,16,44,Mostly Cloudy
+2022-02-26 13:56:00,17,43,Mostly Cloudy
+2022-02-26 14:56:00,19,37,Mostly Cloudy
+2022-02-26 15:56:00,19,37,Mostly Cloudy
+2022-02-26 16:56:00,18,39,Mostly Cloudy
+2022-02-26 17:56:00,18,40,Mostly Cloudy
+2022-02-26 18:56:00,17,44,Mostly Cloudy
+2022-02-26 19:56:00,16,46,Cloudy
+2022-02-26 20:56:00,16,47,Cloudy
+2022-02-26 21:56:00,14,51,Mostly Cloudy
+2022-02-26 22:56:00,14,51,Mostly Cloudy
+2022-02-26 23:56:00,13,53,Cloudy

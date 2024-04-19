@@ -1,0 +1,30 @@
+time,ambient_temperature,relative_humidity,weather_condition
+2023-10-20 00:56:00,13,93,Mostly Cloudy
+2023-10-20 01:56:00,14,89,Mostly Cloudy
+2023-10-20 02:56:00,14,87,Mostly Cloudy
+2023-10-20 03:56:00,13,93,Mostly Cloudy
+2023-10-20 04:56:00,13,93,Mostly Cloudy
+2023-10-20 05:56:00,13,93,Partly Cloudy
+2023-10-20 06:56:00,13,96,Fair
+2023-10-20 07:56:00,12,97,Fair
+2023-10-20 08:56:00,16,86,Partly Cloudy
+2023-10-20 09:56:00,19,75,Mostly Cloudy
+2023-10-20 10:56:00,17,90,Light Rain
+2023-10-20 11:56:00,17,93,Light Rain
+2023-10-20 12:56:00,18,87,Cloudy
+2023-10-20 13:56:00,19,81,Cloudy
+2023-10-20 14:56:00,18,84,Cloudy
+2023-10-20 15:56:00,21,73,Mostly Cloudy
+2023-10-20 16:53:00,22,60,Thunder in the Vicinity
+2023-10-20 16:56:00,22,59,Thunder in the Vicinity
+2023-10-20 17:19:00,19,52,T-Storm
+2023-10-20 17:37:00,15,83,Rain
+2023-10-20 17:48:00,15,83,Light Rain with Thunder
+2023-10-20 17:56:00,16,80,Thunder
+2023-10-20 18:22:00,14,90,Light Rain
+2023-10-20 18:56:00,14,96,Mostly Cloudy
+2023-10-20 19:56:00,13,97,Partly Cloudy
+2023-10-20 20:56:00,13,96,Fair
+2023-10-20 21:56:00,13,96,Partly Cloudy
+2023-10-20 22:56:00,12,100,Partly Cloudy
+2023-10-20 23:56:00,14,84,Fair

@@ -1,0 +1,28 @@
+time,ambient_temperature,relative_humidity,weather_condition
+2022-06-12 00:13:00,25,84,Partly Cloudy
+2022-06-12 00:39:00,25,88,Mostly Cloudy
+2022-06-12 00:56:00,25,88,Cloudy
+2022-06-12 01:56:00,25,88,Cloudy
+2022-06-12 02:56:00,24,90,Fair
+2022-06-12 03:56:00,24,94,Mostly Cloudy
+2022-06-12 04:56:00,24,94,Mostly Cloudy
+2022-06-12 05:56:00,23,97,Mostly Cloudy
+2022-06-12 06:34:00,23,97,Cloudy
+2022-06-12 06:56:00,23,97,Mostly Cloudy
+2022-06-12 07:56:00,24,94,Mostly Cloudy
+2022-06-12 08:56:00,26,84,Partly Cloudy
+2022-06-12 09:56:00,28,71,Partly Cloudy
+2022-06-12 10:56:00,31,59,Partly Cloudy
+2022-06-12 11:56:00,32,55,Mostly Cloudy
+2022-06-12 12:56:00,33,50,Mostly Cloudy
+2022-06-12 13:56:00,34,46,Mostly Cloudy
+2022-06-12 14:56:00,33,47,Mostly Cloudy
+2022-06-12 15:56:00,34,41,Mostly Cloudy
+2022-06-12 16:56:00,34,49,Mostly Cloudy
+2022-06-12 17:56:00,34,49,Partly Cloudy
+2022-06-12 18:56:00,33,52,Fair
+2022-06-12 19:56:00,32,55,Mostly Cloudy
+2022-06-12 20:56:00,30,65,Partly Cloudy
+2022-06-12 21:56:00,29,69,Fair
+2022-06-12 22:56:00,29,69,Fair
+2022-06-12 23:56:00,28,74,Fair

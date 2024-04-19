@@ -1,0 +1,25 @@
+time,ambient_temperature,relative_humidity,weather_condition
+2022-04-29 00:56:00,14,72,Partly Cloudy
+2022-04-29 01:56:00,14,72,Partly Cloudy
+2022-04-29 02:56:00,13,75,Partly Cloudy
+2022-04-29 03:56:00,13,77,Partly Cloudy
+2022-04-29 04:56:00,13,80,Fair
+2022-04-29 05:56:00,12,83,Fair
+2022-04-29 06:56:00,12,86,Fair
+2022-04-29 07:56:00,13,86,Mostly Cloudy
+2022-04-29 08:56:00,17,70,Mostly Cloudy
+2022-04-29 09:56:00,19,61,Partly Cloudy
+2022-04-29 10:56:00,21,55,Partly Cloudy
+2022-04-29 11:56:00,23,46,Partly Cloudy
+2022-04-29 12:56:00,24,44,Partly Cloudy
+2022-04-29 13:56:00,24,43,Partly Cloudy
+2022-04-29 14:56:00,25,39,Mostly Cloudy
+2022-04-29 15:56:00,24,40,Mostly Cloudy
+2022-04-29 16:56:00,25,40,Mostly Cloudy
+2022-04-29 17:56:00,26,39,Partly Cloudy
+2022-04-29 18:56:00,24,42,Partly Cloudy
+2022-04-29 19:56:00,23,48,Partly Cloudy
+2022-04-29 20:56:00,22,55,Cloudy
+2022-04-29 21:56:00,20,61,Mostly Cloudy
+2022-04-29 22:56:00,19,61,Mostly Cloudy
+2022-04-29 23:56:00,19,63,Mostly Cloudy

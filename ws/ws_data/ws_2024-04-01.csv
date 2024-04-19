@@ -1,0 +1,25 @@
+time,ambient_temperature,relative_humidity,weather_condition
+2024-04-01 00:56:00,19,66,Partly Cloudy
+2024-04-01 01:56:00,19,68,Partly Cloudy
+2024-04-01 02:56:00,18,72,Partly Cloudy
+2024-04-01 03:56:00,17,75,Partly Cloudy
+2024-04-01 04:56:00,17,78,Partly Cloudy
+2024-04-01 05:56:00,17,78,Cloudy
+2024-04-01 06:56:00,17,78,Cloudy
+2024-04-01 07:56:00,17,81,Cloudy
+2024-04-01 08:56:00,19,75,Mostly Cloudy
+2024-04-01 09:56:00,20,73,Mostly Cloudy
+2024-04-01 10:56:00,23,64,Mostly Cloudy
+2024-04-01 11:56:00,25,60,Mostly Cloudy
+2024-04-01 12:56:00,26,56,Cloudy
+2024-04-01 13:56:00,26,56,Cloudy
+2024-04-01 14:56:00,26,58,Cloudy
+2024-04-01 15:56:00,27,54,Mostly Cloudy
+2024-04-01 16:56:00,27,52,Mostly Cloudy
+2024-04-01 17:56:00,27,54,Mostly Cloudy
+2024-04-01 18:56:00,26,54,Mostly Cloudy
+2024-04-01 19:56:00,24,62,Mostly Cloudy
+2024-04-01 20:56:00,23,68,Mostly Cloudy
+2024-04-01 21:56:00,21,76,Mostly Cloudy
+2024-04-01 22:56:00,22,73,Mostly Cloudy
+2024-04-01 23:56:00,22,70,Cloudy

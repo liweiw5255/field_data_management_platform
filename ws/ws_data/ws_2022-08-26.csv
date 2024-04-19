@@ -1,0 +1,42 @@
+time,ambient_temperature,relative_humidity,weather_condition
+2022-08-26 00:13:00,23,100,Cloudy
+2022-08-26 00:25:00,23,100,Cloudy
+2022-08-26 00:39:00,23,100,Cloudy
+2022-08-26 00:51:00,23,100,Mostly Cloudy
+2022-08-26 00:56:00,23,96,Cloudy
+2022-08-26 01:14:00,23,96,Mostly Cloudy
+2022-08-26 01:23:00,23,100,Partly Cloudy
+2022-08-26 01:56:00,23,100,Mostly Cloudy
+2022-08-26 02:56:00,23,97,Cloudy
+2022-08-26 03:56:00,23,97,Cloudy
+2022-08-26 04:34:00,23,100,Mostly Cloudy
+2022-08-26 04:56:00,23,96,Mostly Cloudy
+2022-08-26 05:11:00,23,96,Partly Cloudy
+2022-08-26 05:56:00,22,97,Partly Cloudy
+2022-08-26 06:00:00,22,100,Mostly Cloudy
+2022-08-26 06:23:00,23,96,Cloudy
+2022-08-26 06:56:00,23,96,Cloudy
+2022-08-26 07:11:00,23,96,Mostly Cloudy
+2022-08-26 07:26:00,22,100,Mostly Cloudy
+2022-08-26 07:48:00,22,100,Mostly Cloudy
+2022-08-26 07:56:00,22,100,Mostly Cloudy
+2022-08-26 08:10:00,23,96,Cloudy
+2022-08-26 08:56:00,24,94,Mostly Cloudy
+2022-08-26 09:52:00,25,83,Mostly Cloudy
+2022-08-26 09:56:00,25,84,Mostly Cloudy
+2022-08-26 10:56:00,27,77,Partly Cloudy
+2022-08-26 11:56:00,28,71,Mostly Cloudy
+2022-08-26 12:03:00,28,69,Mostly Cloudy
+2022-08-26 12:12:00,28,70,Mostly Cloudy
+2022-08-26 12:56:00,29,65,Partly Cloudy
+2022-08-26 13:56:00,30,63,Partly Cloudy
+2022-08-26 14:56:00,32,53,Partly Cloudy
+2022-08-26 15:56:00,31,53,Partly Cloudy
+2022-08-26 16:56:00,31,55,Partly Cloudy
+2022-08-26 17:56:00,30,65,Mostly Cloudy
+2022-08-26 18:56:00,29,69,Partly Cloudy
+2022-08-26 19:56:00,28,74,Partly Cloudy
+2022-08-26 20:56:00,27,81,Partly Cloudy
+2022-08-26 21:56:00,26,84,Partly Cloudy
+2022-08-26 22:56:00,25,90,Partly Cloudy
+2022-08-26 23:56:00,25,90,Partly Cloudy

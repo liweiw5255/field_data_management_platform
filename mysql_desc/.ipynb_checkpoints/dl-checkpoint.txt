@@ -1,0 +1,2 @@
+Table	Create Table
+DeviceList	CREATE TABLE `DeviceList` (\n  `device_id` int NOT NULL AUTO_INCREMENT,\n  `device_name` varchar(255) DEFAULT NULL,\n  `device_type_id` int NOT NULL,\n  `device_type_name` varchar(255) DEFAULT NULL,\n  PRIMARY KEY (`device_id`)\n) ENGINE=InnoDB AUTO_INCREMENT=59 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci

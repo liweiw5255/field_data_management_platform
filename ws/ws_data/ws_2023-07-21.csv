@@ -1,0 +1,33 @@
+time,ambient_temperature,relative_humidity,weather_condition
+2023-07-21 00:56:00,23,91,Mostly Cloudy
+2023-07-21 01:56:00,23,87,Mostly Cloudy
+2023-07-21 02:56:00,23,82,Mostly Cloudy
+2023-07-21 03:56:00,23,85,Mostly Cloudy
+2023-07-21 04:56:00,23,87,Fair
+2023-07-21 05:56:00,22,91,Fair
+2023-07-21 06:56:00,23,87,Partly Cloudy
+2023-07-21 07:56:00,24,84,Mostly Cloudy
+2023-07-21 08:56:00,26,77,Partly Cloudy
+2023-07-21 09:56:00,29,65,Partly Cloudy
+2023-07-21 10:56:00,30,65,Mostly Cloudy
+2023-07-21 11:56:00,31,59,Mostly Cloudy
+2023-07-21 12:56:00,31,57,Mostly Cloudy
+2023-07-21 13:56:00,32,55,Mostly Cloudy
+2023-07-21 14:56:00,34,49,Mostly Cloudy
+2023-07-21 15:56:00,34,49,Partly Cloudy
+2023-07-21 16:53:00,34,46,Thunder in the Vicinity
+2023-07-21 16:56:00,34,46,Thunder in the Vicinity
+2023-07-21 17:29:00,34,49,Partly Cloudy
+2023-07-21 17:56:00,34,52,Partly Cloudy
+2023-07-21 18:56:00,33,52,Partly Cloudy
+2023-07-21 19:56:00,32,59,Partly Cloudy
+2023-07-21 20:40:00,31,65,Thunder in the Vicinity
+2023-07-21 20:56:00,29,61,Thunder in the Vicinity
+2023-07-21 21:37:00,26,71,Partly Cloudy
+2023-07-21 21:56:00,25,76,Mostly Cloudy
+2023-07-21 22:07:00,25,76,Thunder in the Vicinity
+2023-07-21 22:27:00,25,82,Heavy T-Storm
+2023-07-21 22:46:00,24,94,Light Rain
+2023-07-21 22:56:00,24,96,Mostly Cloudy
+2023-07-21 23:13:00,23,100,Thunder in the Vicinity
+2023-07-21 23:56:00,23,100,Thunder in the Vicinity

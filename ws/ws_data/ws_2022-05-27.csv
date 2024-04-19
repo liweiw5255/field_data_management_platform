@@ -1,0 +1,33 @@
+time,ambient_temperature,relative_humidity,weather_condition
+2022-05-27 00:56:00,23,91,Mostly Cloudy
+2022-05-27 01:33:00,23,91,Mostly Cloudy
+2022-05-27 01:56:00,23,91,Cloudy
+2022-05-27 02:56:00,23,91,Mostly Cloudy
+2022-05-27 03:53:00,24,89,Cloudy
+2022-05-27 03:56:00,24,87,Cloudy
+2022-05-27 04:37:00,24,87,Cloudy
+2022-05-27 04:56:00,24,87,Cloudy
+2022-05-27 05:37:00,24,84,Mostly Cloudy
+2022-05-27 05:56:00,23,87,Mostly Cloudy
+2022-05-27 06:56:00,23,87,Mostly Cloudy
+2022-05-27 07:20:00,22,87,Partly Cloudy
+2022-05-27 07:56:00,23,81,Mostly Cloudy
+2022-05-27 08:39:00,23,81,Cloudy
+2022-05-27 08:56:00,23,81,Cloudy
+2022-05-27 09:56:00,23,79,Cloudy
+2022-05-27 10:56:00,25,74,Mostly Cloudy
+2022-05-27 11:40:00,26,68,Mostly Cloudy
+2022-05-27 11:56:00,26,68,Mostly Cloudy
+2022-05-27 12:35:00,26,69,Mostly Cloudy
+2022-05-27 12:56:00,27,62,Mostly Cloudy
+2022-05-27 13:56:00,27,52,Partly Cloudy
+2022-05-27 14:56:00,29,40,Partly Cloudy
+2022-05-27 15:56:00,29,41,Partly Cloudy
+2022-05-27 16:56:00,29,41,Partly Cloudy
+2022-05-27 17:56:00,29,41,Partly Cloudy
+2022-05-27 18:56:00,29,44,Partly Cloudy
+2022-05-27 19:56:00,28,47,Partly Cloudy
+2022-05-27 20:56:00,26,54,Partly Cloudy
+2022-05-27 21:56:00,24,60,Partly Cloudy
+2022-05-27 22:56:00,24,64,Mostly Cloudy
+2022-05-27 23:56:00,24,67,Cloudy

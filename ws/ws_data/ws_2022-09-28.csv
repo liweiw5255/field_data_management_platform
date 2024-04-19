@@ -1,0 +1,25 @@
+time,ambient_temperature,relative_humidity,weather_condition
+2022-09-28 00:56:00,18,37,Mostly Cloudy
+2022-09-28 01:56:00,13,67,Mostly Cloudy
+2022-09-28 02:56:00,13,72,Mostly Cloudy
+2022-09-28 03:56:00,12,77,Mostly Cloudy
+2022-09-28 04:56:00,11,74,Partly Cloudy
+2022-09-28 05:56:00,14,55,Mostly Cloudy
+2022-09-28 06:56:00,14,57,Mostly Cloudy
+2022-09-28 07:56:00,14,57,Mostly Cloudy
+2022-09-28 08:56:00,16,52,Mostly Cloudy
+2022-09-28 09:56:00,19,38,Mostly Cloudy
+2022-09-28 10:56:00,20,35,Mostly Cloudy
+2022-09-28 11:56:00,22,30,Mostly Cloudy
+2022-09-28 12:56:00,23,28,Mostly Cloudy
+2022-09-28 13:56:00,23,27,Mostly Cloudy
+2022-09-28 14:56:00,23,27,Mostly Cloudy
+2022-09-28 15:56:00,23,27,Mostly Cloudy
+2022-09-28 16:56:00,22,27,Mostly Cloudy
+2022-09-28 17:56:00,21,30,Mostly Cloudy
+2022-09-28 18:56:00,20,32,Mostly Cloudy
+2022-09-28 19:56:00,19,37,Mostly Cloudy
+2022-09-28 20:56:00,18,40,Mostly Cloudy
+2022-09-28 21:56:00,17,43,Mostly Cloudy
+2022-09-28 22:56:00,17,41,Mostly Cloudy
+2022-09-28 23:56:00,17,43,Cloudy

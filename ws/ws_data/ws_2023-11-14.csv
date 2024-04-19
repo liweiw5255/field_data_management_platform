@@ -1,0 +1,25 @@
+time,ambient_temperature,relative_humidity,weather_condition
+2023-11-14 00:56:00,7,93,Mostly Cloudy
+2023-11-14 01:56:00,7,96,Mostly Cloudy
+2023-11-14 02:56:00,6,100,Mostly Cloudy
+2023-11-14 03:56:00,6,97,Mostly Cloudy
+2023-11-14 04:56:00,6,93,Cloudy
+2023-11-14 05:56:00,6,96,Cloudy
+2023-11-14 06:56:00,6,96,Patches of Fog
+2023-11-14 07:56:00,7,96,Patches of Fog
+2023-11-14 08:56:00,11,83,Patches of Fog
+2023-11-14 09:56:00,15,42,Mostly Cloudy
+2023-11-14 10:56:00,16,36,Mostly Cloudy
+2023-11-14 11:56:00,18,28,Partly Cloudy
+2023-11-14 12:56:00,19,29,Mostly Cloudy
+2023-11-14 13:56:00,19,26,Cloudy
+2023-11-14 14:56:00,19,26,Partly Cloudy
+2023-11-14 15:56:00,18,28,Mostly Cloudy
+2023-11-14 16:56:00,17,37,Mostly Cloudy
+2023-11-14 17:56:00,14,47,Mostly Cloudy
+2023-11-14 18:56:00,11,71,Mostly Cloudy
+2023-11-14 19:56:00,11,71,Mostly Cloudy
+2023-11-14 20:56:00,9,74,Mostly Cloudy
+2023-11-14 21:56:00,8,83,Mostly Cloudy
+2023-11-14 22:56:00,8,86,Mostly Cloudy
+2023-11-14 23:56:00,8,89,Cloudy

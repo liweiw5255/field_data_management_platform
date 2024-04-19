@@ -1,0 +1,27 @@
+time,ambient_temperature,relative_humidity,weather_condition
+2022-08-15 00:56:00,23,76,Partly Cloudy
+2022-08-15 01:56:00,23,79,Partly Cloudy
+2022-08-15 02:56:00,23,76,Fair
+2022-08-15 03:56:00,22,81,Fair
+2022-08-15 04:56:00,22,78,Mostly Cloudy
+2022-08-15 05:56:00,22,78,Partly Cloudy
+2022-08-15 06:56:00,22,78,Fair
+2022-08-15 07:56:00,23,73,Fair
+2022-08-15 08:56:00,25,66,Fair
+2022-08-15 09:56:00,27,62,Mostly Cloudy
+2022-08-15 10:56:00,29,58,Partly Cloudy
+2022-08-15 11:56:00,29,58,Mostly Cloudy
+2022-08-15 12:56:00,31,55,Mostly Cloudy
+2022-08-15 13:56:00,31,53,Mostly Cloudy
+2022-08-15 14:56:00,32,52,Mostly Cloudy
+2022-08-15 15:56:00,33,48,Mostly Cloudy
+2022-08-15 16:56:00,32,52,Mostly Cloudy
+2022-08-15 17:56:00,32,50,Partly Cloudy
+2022-08-15 18:56:00,31,53,Partly Cloudy
+2022-08-15 19:56:00,30,55,Mostly Cloudy
+2022-08-15 20:56:00,29,61,Mostly Cloudy
+2022-08-15 21:56:00,28,58,Mostly Cloudy
+2022-08-15 22:56:00,27,65,Light Rain
+2022-08-15 23:37:00,23,91,Heavy Rain
+2022-08-15 23:46:00,23,96,Heavy Rain
+2022-08-15 23:56:00,23,93,Cloudy

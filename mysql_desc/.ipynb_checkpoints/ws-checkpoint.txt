@@ -1,0 +1,6 @@
+time                | datetime     | NO   | PRI | NULL    |       |
+| ambient_temperature | double       | NO   |     | NULL    |       |
+| relative_humidity   | double       | NO   |     | NULL    |       |
+| weather_condition   | varchar(255) | YES  |     | NULL    |       |
+| weather_score       | double       | NO   |     | NULL    |       |
++---------------------+--------------+------+-----
