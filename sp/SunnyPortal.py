@@ -1,0 +1,530 @@
+import os
+import time
+from selenium import webdriver
+from selenium.webdriver.common.by import By
+from selenium.webdriver.support.ui import WebDriverWait
+from selenium.webdriver.support import expected_conditions as EC
+from selenium.webdriver.common.desired_capabilities import DesiredCapabilities
+from selenium.webdriver.chrome.service import Service
+from datetime import date, timedelta, datetime
+import pandas as pd
+from bs4 import BeautifulSoup
+import requests
+import json
+import pytz
+
+class SunnyPortal:
+ 
+    startDate = None
+    endDate = None
+    timeout = 60
+    login_url = 'https://ennexos.sunnyportal.com/login'
+    info_url = "https://uiapi.sunnyportal.com/api/v1/measurements/search"
+
+    
+    inverterList = {'10249492':'28', '10249486':'29', '10249504':'30'}
+    sensorList = {'10764334':'28','10764335':'29','10764336':'30','10764341':'ir'}
+    sensorChannelList = ['Measurement.InOut.Tmp[0]', 'Measurement.InOut.Tmp[1]','Measurement.InOut.ValNom']
+    inverterChannelList = ['Measurement.GridMs.TotW.Pv', 'Measurement.GridMs.W.phsA','Measurement.GridMs.W.phsB','Measurement.GridMs.W.phsC',
+        'Measurement.GridMs.TotVAr','Measurement.GridMs.VAr.phsA','Measurement.GridMs.VAr.phsB','Measurement.GridMs.VAr.phsC',
+        'Measurement.GridMs.TotVA', 'Measurement.GridMs.VA.phsA','Measurement.GridMs.VA.phsB','Measurement.GridMs.VA.phsC',
+        'Measurement.GridMs.PhV.phsA','Measurement.GridMs.PhV.phsB','Measurement.GridMs.PhV.phsC',
+        'Measurement.GridMs.A.phsA','Measurement.GridMs.A.phsB','Measurement.GridMs.A.phsC','Measurement.GridMs.Hz',
+        'Measurement.DcMs.Watt[0]','Measurement.DcMs.Watt[1]','Measurement.DcMs.Vol[0]','Measurement.DcMs.Vol[1]',
+        'Measurement.DcMs.Amp[0]','Measurement.DcMs.Amp[1]','Measurement.Isolation.LeakRis']
+    
+    AVGmultiAggregateList = ['Measurement.GridMs.PhV.phsA','Measurement.GridMs.PhV.phsB','Measurement.GridMs.PhV.phsC','Measurement.GridMs.Hz', 'Measurement.DcMs.Vol[0]', 'Measurement.DcMs.Vol[1]','Measurement.InOut.Tmp[0]','Measurement.InOut.Tmp[1]','Measurement.InOut.TotInsol']
+    MINmultiAggregateList = ['Measurement.Isolation.LeakRis']
+    
+    solarIrradiance = ['10764341']
+    solarIrradianceChannel = 'Measurement.InOut.TotInsol'
+
+    access_token = ''
+
+    # private properties
+    __username = ''
+    __password = ''
+    chrome_path = ''
+    driver_path = ''
+    path = ''
+
+    def __init__(self, path, chrome_path, driver_path):
+        self.path = path
+        self.chrome_path = chrome_path
+        self.driver_path = driver_path
+
+    def setUserName(self, username):
+        self.__username = username
+
+    def setPassword(self, password):
+        self.__password = password
+
+    def setStartDate(self, startDate):
+        self.startDate = startDate
+    
+    def setEndDate(self, endDate):
+        self.endDate = endDate
+
+    def ny2utc(self, ny_time):
+        return ny_time.astimezone(pytz.utc)
+
+    def utc2ny(self, utc_time):
+        return utc_time.astimezone(pytz.timezone('America/New_York'))
+  
+    def composePayloads(self, deviceID, begin_time, end_time):
+        
+        json_structure = {'queryItems': [],
+                   'dateTimeBegin': begin_time,
+                   'dateTimeEnd': end_time}
+        
+        if deviceID in self.inverterList:            
+         
+            for channel in self.inverterChannelList:
+                if channel in self.AVGmultiAggregateList:
+                    aggregate = 'Avg'
+                elif channel in self.MINmultiAggregateList:
+                    aggregate = 'Min'
+                else:
+                    aggregate = 'Sum'
+                    
+                json_structure['queryItems'].append(
+                    {
+                        'componentId': deviceID,
+                        'channelId': channel,
+                        'timezone': 'America/New_York',
+                        'aggregate': 'Avg',
+                        'multiAggregate': aggregate
+                    },)
+        
+        elif deviceID in self.sensorList:              
+            for channel in self.sensorChannelList:
+                if channel in self.AVGmultiAggregateList:
+                    aggregate = 'Avg'
+                elif channel in self.MINmultiAggregateList:
+                    aggregate = 'Min'
+                else:
+                    aggregate = 'Sum'
+                    
+                json_structure['queryItems'].append(
+                    {
+                        'componentId': deviceID,
+                        'channelId': channel,
+                        'timezone': 'America/New_York',
+                        'aggregate': 'Avg',
+                        'multiAggregate': aggregate
+                    },)
+        
+            if deviceID in self.solarIrradiance:
+                 json_structure['queryItems'].append(
+                    {
+                        'componentId': deviceID,
+                        'channelId': self.solarIrradianceChannel,
+                        'timezone': 'America/New_York',
+                        'aggregate': 'Avg',
+                        'multiAggregate': 'Sum'
+                    },)
+                
+        
+        else:
+            print("Wrong device ID")
+            return None
+        
+        return json_structure #json.dumps(json_structure, indent=4) 
+            
+    def composeDataFrame(self, deviceID, currentDate, measurements):
+        df = pd.DataFrame()
+        time_list = pd.date_range(start=currentDate.replace(hour=0, minute=0),end=currentDate.replace(hour=23, minute=55), freq="5min", tz='US/Eastern')   
+        index = 0
+        if measurements is None:
+            #print(currentDate.strftime('%Y-%m-%d'), " data not available")
+            return
+        else:
+            for component in measurements:
+                if(len(component['values'])>0):
+                    new_df = pd.DataFrame()
+                    current_index = 0
+                   
+                    for record in component['values']:
+                        if(record['value'] is None):
+                            record['value'] = -1   
+                        # Convert UTC time to NY time
+                        ny_time = self.utc2ny(datetime.strptime(record['time'], "%Y-%m-%dT%H:%M:%SZ").replace(tzinfo=pytz.utc))
+                        ny_time_string = ny_time.strftime("%Y-%m-%d %H:%M:%S")
+                         
+                        # Fill the record before sunrise to -1    
+                        if(ny_time > time_list[current_index]):
+                            update_date = time_list[current_index]                     
+                            while(update_date < ny_time):
+                                if(index==0):
+                                    tmp_df = pd.DataFrame({'time': update_date.strftime("%Y-%m-%d %H:%M:%S"),'value':[-1]})
+                                else:
+                                    tmp_df = pd.DataFrame({'value': [-1]})
+                                new_df = pd.concat([new_df, tmp_df], axis=0)
+                                current_index = current_index + 1
+                                update_date = time_list[current_index]
+                        
+                        if(index==0):
+                            tmp_df = pd.DataFrame({'time': ny_time_string,'value':[record['value']]})
+                        else:
+                            tmp_df = pd.DataFrame({'value':[record['value']]})
+                        current_index = current_index + 1
+                
+                        new_df = pd.concat([new_df, tmp_df], axis=0)  
+                
+                  
+                    while(current_index<time_list.shape[0]):
+                        if(index == 0):
+                             tmp_df = pd.DataFrame({'time': time_list[current_index].strftime("%Y-%m-%d %H:%M:%S"),'value':[-1]})
+                        else:
+                            tmp_df = pd.DataFrame({'value':[-1]})
+                        new_df = pd.concat([new_df, tmp_df], axis=0)
+                        current_index = current_index + 1
+                    index = index + 1
+
+                    df = pd.concat([df, new_df], axis=1, ignore_index=True)
+                    
+                else:
+                    # Component has empty values - create column filled with -1
+                    print(deviceID, component)
+                    new_df = pd.DataFrame()
+                    for current_index in range(len(time_list)):
+                        if(index == 0):
+                            tmp_df = pd.DataFrame({'time': time_list[current_index].strftime("%Y-%m-%d %H:%M:%S"),'value':[-1]})
+                        else:
+                            tmp_df = pd.DataFrame({'value':[-1]})
+                        new_df = pd.concat([new_df, tmp_df], axis=0)
+                    index = index + 1
+                    df = pd.concat([df, new_df], axis=1, ignore_index=True)
+            
+            # Check if df is empty (no data was added)
+            if df.empty:
+                return None
+            
+            if deviceID in self.inverterList: 
+                deviceid = pd.concat([pd.DataFrame([self.inverterList[deviceID]])] * len(df))
+                df = pd.concat([df, deviceid], axis=1, ignore_index=True)
+                df.columns = ['time','ac_power','ac_power_l1','ac_power_l2','ac_power_l3', 'ac_reactive_power','ac_reactive_power_l1','ac_reactive_power_l2','ac_reactive_power_l3','ac_apparent_power','ac_apparent_power_l1','ac_apparent_power_l2','ac_apparent_power_l3','ac_voltage_l1','ac_voltage_l2','ac_voltage_l3','ac_current_l1','ac_current_l2','ac_current_l3','grid_frequency','dc_power_a','dc_power_b','dc_voltage_a','dc_voltage_b','dc_current_a','dc_current_b','iso', 'deviceID'] 
+                
+            elif deviceID in self.sensorList:
+                if deviceID in self.solarIrradiance:
+                    df.columns = ['time','ambient_temp1','ambient_temp2', 'ambient_rh', 'ir']
+                else:
+                    deviceid = pd.concat([pd.DataFrame([self.sensorList[deviceID]])] * len(df))
+                    df = pd.concat([df, deviceid], axis=1, ignore_index=True)
+                    df.columns = ['time','inv_temp1', 'inv_temp2', 'inv_rh', 'deviceID']
+                    df = df[['inv_temp1', 'inv_temp2','inv_rh','deviceID']]
+                    
+            else:
+                print("Wrong Device ID")
+                return None
+
+
+        return df
+
+    def requestInfo(self, currentDate):
+
+        begin_time = (self.ny2utc((currentDate-timedelta(days=1)).replace(hour=23, minute=55))).strftime("%Y-%m-%dT%H:%M:%S.000Z")
+        end_time = (self.ny2utc(currentDate.replace(hour=23, minute=55))).strftime("%Y-%m-%dT%H:%M:%S.000Z")
+        #end_time = (self.ny2utc(currentDate+timedelta(days=1))).strftime("%Y-%m-%dT%H:%M:%S.000Z")
+        #begin_time = currentDate.strftime("%Y-%m-%dT00:00:00.000Z")
+        #end_time = (currentDate+timedelta(days=1)).strftime("%Y-%m-%dT00:00:00.000Z")
+
+        info_header = {
+            'Accept' : 'application/json, text/plain, */*',
+            'Accept-Encoding' : 'gzip, deflate, br',
+            'Accept-Language' : 'en-US,en;q=0.9,zh-CN;q=0.8,zh;q=0.7',
+            'Connection' : 'keep-alive',
+            'Content-Type' : 'application/json',
+            'Authorization' : 'Bearer '+ self.access_token,
+            'Host' : 'uiapi.sunnyportal.com',
+            'Origin' : 'https://ennexos.sunnyportal.com',
+            'Referer' : 'https://ennexos.sunnyportal.com/',
+            'Sec-Fetch-Dest' : 'empty',
+            'Sec-Fetch-Mode' : 'cors',
+            'Sec-Fetch-Site' : 'same-site',
+            'User-Agent' : 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36',
+            'sec-ch-ua-platform' : 'Windows'
+        }
+        
+        
+        inverter_dfs = []
+        sensor_dfs = []
+        
+        solar_info_payloads = self.composePayloads(self.solarIrradiance[0], begin_time, end_time)
+        solar_df = None
+        try:
+            response = requests.post(self.info_url, headers=info_header, json=solar_info_payloads)
+            response.raise_for_status()  # Raise exception for bad status codes
+            solar_measurements = json.loads(response.text)
+            # Check if response is an error
+            if isinstance(solar_measurements, dict) and ('error' in solar_measurements or 'message' in solar_measurements):
+                print(f"Warning: API returned error for solar data on {currentDate.strftime('%Y-%m-%d')}: {solar_measurements}")
+                solar_df = None
+            else:
+                solar_df = self.composeDataFrame(self.solarIrradiance[0], currentDate, solar_measurements)
+                if solar_df is None or solar_df.empty:
+                    print(f"Warning: Solar data for {currentDate.strftime('%Y-%m-%d')} is empty or None")
+                    solar_df = None
+        except requests.exceptions.RequestException as e:
+            print(f"Request error fetching solar data for {currentDate.strftime('%Y-%m-%d')}: {e}")
+            solar_measurements = None
+            solar_df = None
+        except json.JSONDecodeError as e:
+            print(f"JSON decode error for solar data on {currentDate.strftime('%Y-%m-%d')}: {e}")
+            solar_df = None
+        except Exception as e:
+            print(f"Error fetching solar data for {currentDate.strftime('%Y-%m-%d')}: {e}")
+            solar_measurements = None
+            solar_df = None
+        
+        for inverter, sensor in zip(self.inverterList, self.sensorList):
+        
+            inverter_info_payloads = self.composePayloads(inverter, begin_time, end_time)
+            sensor_info_payloads = self.composePayloads(sensor, begin_time, end_time)
+            
+            try:
+                response = requests.post(self.info_url, headers=info_header, json=inverter_info_payloads)
+                response.raise_for_status()
+                inverter_measurements = json.loads(response.text)
+                if isinstance(inverter_measurements, dict) and ('error' in inverter_measurements or 'message' in inverter_measurements):
+                    print(f"Warning: API returned error for inverter {inverter} on {currentDate.strftime('%Y-%m-%d')}: {inverter_measurements}")
+                    inverter_measurements = None
+            except Exception as e:
+                print(f"Error fetching inverter {inverter} data for {currentDate.strftime('%Y-%m-%d')}: {e}")
+                inverter_measurements = None
+           
+            try:
+                response = requests.post(self.info_url, headers=info_header, json=sensor_info_payloads)
+                response.raise_for_status()
+                sensor_measurements = json.loads(response.text)
+                if isinstance(sensor_measurements, dict) and ('error' in sensor_measurements or 'message' in sensor_measurements):
+                    print(f"Warning: API returned error for sensor {sensor} on {currentDate.strftime('%Y-%m-%d')}: {sensor_measurements}")
+                    sensor_measurements = None
+            except Exception as e:
+                print(f"Error fetching sensor {sensor} data for {currentDate.strftime('%Y-%m-%d')}: {e}")
+                sensor_measurements = None
+                
+            inverter_df = self.composeDataFrame(inverter, currentDate, inverter_measurements)
+            if inverter_df is not None and not inverter_df.empty:
+                inverter_dfs.append(inverter_df)
+            
+            sensor_df = self.composeDataFrame(sensor, currentDate, sensor_measurements)
+            if sensor_df is not None and not sensor_df.empty:
+                # Only concatenate if solar_df is available (required for proper structure)
+                if solar_df is not None and not solar_df.empty:
+                    sensor_df = pd.concat([solar_df, sensor_df], axis=1)
+                    sensor_dfs.append(sensor_df)
+                else:
+                    print(f"Warning: Solar data unavailable for {currentDate.strftime('%Y-%m-%d')}, skipping sensor data for this date")
+            else:
+                print(f"Warning: Sensor data for {currentDate.strftime('%Y-%m-%d')} is empty or None")
+            
+        op_filename = "operating/sp_" + currentDate.strftime("%Y-%m-%d")
+        env_filename = "environmental/sp_" + currentDate.strftime("%Y-%m-%d")
+        
+        try:
+            if len(inverter_dfs) > 0:
+                final_inverter_df = pd.concat(inverter_dfs)
+                final_inverter_df.to_csv(self.path + op_filename +".csv", index=False)
+                print(op_filename," has been saved!")
+            else:
+                print(f"Warning: No inverter data available for {currentDate.strftime('%Y-%m-%d')}, skipping save")
+        except Exception as e:
+                print(op_filename,"save Failed: ",e)
+    
+        try:
+            if len(sensor_dfs) > 0:
+                final_sensor_df = pd.concat(sensor_dfs)
+                final_sensor_df.to_csv(self.path + env_filename +".csv", index=False)
+                print(env_filename," has been saved!")
+            else:
+                print(f"Warning: No sensor data available for {currentDate.strftime('%Y-%m-%d')}, skipping save")
+        except Exception as e:
+                print(env_filename,"save Failed: ",e)
+
+    def chromedriver_init(self):
+    
+        caps = DesiredCapabilities.CHROME
+        caps['goog:loggingPrefs'] = {'performance': 'ALL'}
+
+        option = webdriver.ChromeOptions()
+        # Set Chrome binary location if provided
+        if self.chrome_path and os.path.exists(self.chrome_path):
+            # Make sure Chrome binary is executable
+            os.chmod(self.chrome_path, 0o755)
+            option.binary_location = self.chrome_path
+            print(f"Using Chrome binary: {self.chrome_path}")
+        
+        # Essential arguments for server/headless environments
+        option.add_argument('--no-sandbox')
+        option.add_argument('--disable-dev-shm-usage')
+        option.add_argument('--disable-gpu')
+        option.add_argument('--disable-software-rasterizer')
+        option.add_argument('--disable-extensions')
+        option.add_argument('--disable-background-networking')
+        option.add_argument('--disable-background-timer-throttling')
+        option.add_argument('--disable-renderer-backgrounding')
+        option.add_argument('--disable-backgrounding-occluded-windows')
+        option.add_argument('--disable-breakpad')
+        option.add_argument('--disable-client-side-phishing-detection')
+        option.add_argument('--disable-default-apps')
+        option.add_argument('--disable-hang-monitor')
+        option.add_argument('--disable-popup-blocking')
+        option.add_argument('--disable-prompt-on-repost')
+        option.add_argument('--disable-sync')
+        option.add_argument('--disable-translate')
+        option.add_argument('--metrics-recording-only')
+        option.add_argument('--no-first-run')
+        option.add_argument('--safebrowsing-disable-auto-update')
+        option.add_argument('--enable-automation')
+        option.add_argument('--password-store=basic')
+        option.add_argument('--use-mock-keychain')
+        option.add_argument('--incognito')
+        option.add_argument("--enable-logging")
+        option.add_argument('--ignore-certificate-errors')
+        option.add_argument('--ignore-certificate-errors-spki-list')
+        option.add_argument('--ignore-ssl-errors')
+        #option.add_argument("--headless")
+        option.add_argument('--verbose')
+        option.add_argument('--log-level=3')
+
+        option.add_experimental_option('useAutomationExtension', False)
+        option.add_experimental_option('excludeSwitches', ['enable-automation', 'enable-logging'])
+        # Enable logging and specify logging preferences for network and performance logs
+        option.add_experimental_option("perfLoggingPrefs", {"enableNetwork": True, "enablePage": True, "traceCategories": "devtools.timeline,devtools.network,devtools.page"})
+
+        # Set ChromeDriver service with driver path if provided
+        try:
+            if self.driver_path and os.path.exists(self.driver_path):
+                print(f"Using ChromeDriver: {self.driver_path}")
+                # Make sure the driver is executable
+                os.chmod(self.driver_path, 0o755)
+                service = Service(self.driver_path)
+                driver = webdriver.Chrome(service=service, options=option)
+            else:
+                print("Using system ChromeDriver")
+                driver = webdriver.Chrome(options=option)
+        except Exception as e:
+            print(f"Error initializing ChromeDriver: {e}")
+            # Try with minimal options as fallback
+            minimal_option = webdriver.ChromeOptions()
+            if self.chrome_path and os.path.exists(self.chrome_path):
+                minimal_option.binary_location = self.chrome_path
+            minimal_option.add_argument('--no-sandbox')
+            minimal_option.add_argument('--disable-dev-shm-usage')
+            if self.driver_path and os.path.exists(self.driver_path):
+                service = Service(self.driver_path)
+                driver = webdriver.Chrome(service=service, options=minimal_option)
+            else:
+                driver = webdriver.Chrome(options=minimal_option)
+
+        return driver
+
+    def login(self, driver, url):
+        driver.get(url)
+
+        time.sleep(2)
+        element = WebDriverWait(driver, self.timeout).until(
+            EC.presence_of_element_located((By.XPATH, "/html/body/sma-ennexos/div/mat-sidenav-container/mat-sidenav-content/div/main/sma-smaid-startpage/div/div[1]/div/div[1]/div/ennexos-button")))
+        element.click()
+        '''
+        try:
+            # Wait for the cookie consent pop-up to appear
+            element = WebDriverWait(driver, self.timeout).until(
+            EC.presence_of_element_located((By.ID, "onetrust-accept-btn-handler")))
+            element.click()
+            print("1")
+            
+            element = WebDriverWait(driver, self.timeout).until(
+            EC.presence_of_element_located((By.XPATH, "/html/body/sma-ennexos/div/mat-sidenav-container/mat-sidenav-content/div/main/sma-smaid-startpage/div/div[1]/div/div[1]/div/ennexos-button")))
+            element.click()
+            print("2")
+
+            time.sleep(5)
+
+        except Exception as e:
+
+            print(f"Error: {e}")
+
+       '''
+        time.sleep(3)
+        print("Login Page")
+    
+        print(driver.current_url)
+
+        # username
+        element = WebDriverWait(driver, self.timeout).until(
+            EC.presence_of_element_located((By.XPATH, "/html/body/div/main/div[2]/form/div[2]/input")))
+        element.clear()
+        element.send_keys(self.__username)
+
+        # password
+        element = WebDriverWait(driver, self.timeout).until(
+            EC.presence_of_element_located((By.XPATH, "/html/body/div/main/div[2]/form/div[2]/div[1]/input")))
+        element.clear()
+        element.send_keys(self.__password)
+
+        # submit
+        element = WebDriverWait(driver, self.timeout).until(
+            EC.presence_of_element_located((By.XPATH, "/html/body/div/main/div[2]/form/div[2]/div[3]/button")))
+        element.click()
+
+        time.sleep(3)
+
+        access_token = ''
+
+        logs = driver.get_log("performance")
+        for entry in logs:
+            if "Bearer" in str(entry["message"]):
+                access_token = (entry["message"].split()[3]).split('"')[0]
+                if(len(access_token) > 128):
+                    break
+
+        return access_token  
+
+    def SunnyPortal(self):
+
+        try:
+            driver = self.chromedriver_init()
+            self.access_token = self.login(driver, self.login_url)
+            print("Crediential verified")
+        except Exception as e:
+            print("Login Error: ", e)
+
+
+        if(self.startDate is None):
+            self.startDate = datetime.now() - timedelta(days=1)
+        
+        currentDate = self.startDate
+
+        if(self.endDate is None):
+            self.endDate = datetime.now() - timedelta(days=1)
+
+        while (currentDate <= self.endDate):
+            filename= "sp_" + currentDate.strftime("%Y-%m-%d")
+            if(os.path.isfile(self.path+"operating/"+filename+".csv") and os.path.isfile(self.path+"environmental/"+filename+".csv") ):
+                print(filename, " existed!")
+            else:
+                try:
+                    self.requestInfo(currentDate)
+                except Exception as e:
+                    print(currentDate.strftime("%Y-%m-%d"), " Request Information Error: ",e)
+                    flag = 0
+                    # Open the file in append mode
+                    with open('exception/sp.txt', 'r') as f:
+                        for line in f:
+                        # Check if the string exists in the line
+                            if filename in line.strip():
+                                # Write the new line
+                                flag = 1
+                               
+                     
+                    if(flag == 0):
+                        with open('exception/sp.txt', 'a') as f:
+                            f.write(filename + "\n")
+                    
+                    currentDate = currentDate + timedelta(days=1)
+                    continue
+                
+
+            currentDate = currentDate + timedelta(days=1)

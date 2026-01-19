@@ -1,0 +1,2 @@
+Table	Create Table
+AlsoEnergy	CREATE TABLE `AlsoEnergy` (\n  `Time` datetime DEFAULT NULL,\n  `GHI` double DEFAULT NULL,\n  `POA` double DEFAULT NULL,\n  `ambient_temp` double DEFAULT NULL,\n  `module_temp` double DEFAULT NULL\n) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci

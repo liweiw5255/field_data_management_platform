@@ -1,0 +1,47 @@
+# Credentials and sensitive files
+config.py
+*.env
+.env
+.env.local
+
+# Private keys
+*.pem
+*.key
+**/sftp/*.pem
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+ENV/
+.venv
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# Data directories (optional - uncomment if you don't want to track data files)
+sp/sp_data/
+ae/ae_data/
+de/de_data/
+ws/ws_data/
+tmy/
+chromedriver_palmetto/
+chrome_palmetto/
+chromedriver-linux64/
+chrome-linux64/
+chrome-old
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
