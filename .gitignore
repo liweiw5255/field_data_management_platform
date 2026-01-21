@@ -27,13 +27,15 @@ ENV/
 sp/sp_data/
 ae/ae_data/
 de/de_data/
+de/de_data_csv/
 ws/ws_data/
 tmy/
+data/
 chromedriver_palmetto/
 chrome_palmetto/
 chromedriver-linux64/
 chrome-linux64/
-chrome-old
+chrome-old/
 
 # IDE
 .vscode/

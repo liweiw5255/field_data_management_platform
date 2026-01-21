@@ -16,8 +16,8 @@ sp_password = "tracePV123..."
 sp_object = sp.SunnyPortal(sp_path, chromePath, driverPath)
 sp_object.setUserName(sp_username)
 sp_object.setPassword(sp_password)
-sp_object.setStartDate(datetime(2025,5,16))
-sp_object.setEndDate(datetime(2025,5,20))
+sp_object.setStartDate(datetime(2024,1,1))
+sp_object.setEndDate(datetime(2025,12,31))
 #sp_object.setEndDate(datetime.today() - timedelta(days=1))
 sp_object.SunnyPortal()
 
